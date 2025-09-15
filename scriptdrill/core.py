@@ -66,17 +66,21 @@ def main(
         sys.exit(1)
 
     i = 1
-    while i <= iterations:
-        print(f"--- iterations: {i}/{iterations} ---")
+    try:
+        while i <= iterations:
+            print(f"--- iterations: {i}/{iterations} ---")
 
-        # Choose random letters
-        qletters = random.sample(f_letters, k=n)
+            # Choose random letters
+            qletters = random.sample(f_letters, k=n)
 
-        # Print quesjtion scripts
-        print_ribbon(qscripts, qletters)
-        input("Enter to reveal answers...")
-        print_ribbon(qscripts, qletters)
-        print_ribbon(ascripts, qletters)
-        print("")
+            # Print quesjtion scripts
+            print_ribbon(qscripts, qletters)
+            input("Enter to reveal answers...")
+            print_ribbon(qscripts, qletters)
+            print_ribbon(ascripts, qletters)
+            print("")
 
-        i += 1
+            i += 1
+    except (KeyboardInterrupt, EOFError):
+        print("\nExited")
+        sys.exit(0)

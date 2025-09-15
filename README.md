@@ -15,9 +15,6 @@ python -m scriptdrill hiragana --mode quiz
 ### Run using shebang
 ```bash
 chmod u+x scriptdirll.py // Give scriptdrill.py executable permissions
-./scriptdrill.py script // Execute, add to path for global access
-
-```
-```
+./scriptdrill.py script // Execute, add script path to path var for global access
 ```
 
